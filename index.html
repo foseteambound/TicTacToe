@@ -10,13 +10,53 @@
 
 <body>
     <script>
+
+        // function to generate computers rock, paper, scissor choice. //
         let computerChoice = ['Rock', 'Paper', 'Scissors'];
         function getComputerChoice(computerChoice) {
             return computerChoice[Math.floor(Math.random() * computerChoice.length)]
         }
-        console.log(getComputerChoice(computerChoice));
 
-        
+
+        let playerSelection;
+        let computerChoice2 = (getComputerChoice(computerChoice));
+        console.log(computerChoice2);
+
+        do {
+            playerSelection = prompt('Please choose Rock, Paper, or Scissors.')
+        } while (computerChoice.indexOf(playerSelection) === -1);
+
+
+        function singleRound(playerSelection, computerChoice2) { }
+
+
+        switch (playerSelection + computerChoice2) {
+            case "RockScissors":
+            case "ScissorsPaper":
+            case "PaperRock":
+                console.log('Player has WON!');
+                break;
+            case "PaperPaper":
+            case "ScissorsScissors":
+            case "RockRock":
+                console.log('Player has tied!');
+                break;
+            case "ScissorsRock":
+            case "PaperScissors":
+            case "RockPaper":
+                console.log('Player has LOST!');
+                break;
+            default:
+        }
+
+
+
+
+        console.log(playerSelection + computerChoice2);
+        //  const computerSelection = getComputerChoice();
+
+
+
     </script>
 </body>
 
