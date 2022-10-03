@@ -28,7 +28,7 @@ function lastLetter(word) {
 };
 console.log(lastLetter(word));
 //----------------------------------------------------------------
-// Simple for loop.
+// Simple "for" loop.
 let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
 for (let i = 1; i <= answer; i++) {
     console.log(i);
@@ -46,4 +46,9 @@ for (let i = 1; i <= answer; i++) {
         } else {
             console.log(i);
         }
+    }
+//----------------------------------------------------------------
+// Function for a random selection.
+    function getComputerChoice(computerChoice) {
+        return computerChoice[Math.floor(Math.random() * computerChoice.length)]
     }
